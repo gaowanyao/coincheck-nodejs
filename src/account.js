@@ -11,6 +11,7 @@ Account.prototype = {
         return this._coinCheck.request('get', this.urlRoot + '/leverage_balance', params);
     },
     info : function (params) {
+      // console.log(params);
         return this._coinCheck.request('get', this.urlRoot, params);
     }
 };

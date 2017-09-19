@@ -13,7 +13,7 @@ npm install coincheck
 ## Usage
 
 ```js
-var CoinCheck = require('../src/coin_check.js');
+var CoinCheck = require('./src/coin_check.js');
 
 var coinCheck = new CoinCheck.CoinCheck('ACCESS_KEY', 'API_SECRET');
 
@@ -171,4 +171,3 @@ coinCheck.transfer.from_leverage(params);
 
 ## License
 MIT
-

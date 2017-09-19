@@ -43,6 +43,7 @@ CoinCheck.prototype = {
     VERSION: '0.1.0',
 
     apiBase: 'coincheck.jp',
+    // apiBase: 'coincheck.com',
     accessKey: null,
     secretKey: null,
 
@@ -97,6 +98,7 @@ CoinCheck.prototype = {
         paramData = params.data ? params.data : {};
         options = params.options ? params.options : {};
 
+  
         if (method == 'get' && utils.isEmpty(paramData) === false) {
             path = path + '?' + querystring.stringify(paramData);
             paramData = {};

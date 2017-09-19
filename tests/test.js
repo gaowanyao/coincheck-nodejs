@@ -1,7 +1,12 @@
 var CoinCheck = require('../src/coin_check.js');
 
-var coinCheck = new CoinCheck.CoinCheck('ACCESS_KEY', 'API_SECRET');
 
+const ACCESS_KEY = 'Your ACCESS_KEY';
+const API_SECRET = 'Your API_SECRET';
+
+
+var coinCheck = new CoinCheck.CoinCheck(ACCESS_KEY, API_SECRET);
+// console.log(coinCheck)
 var params = {
     options: {
         success: function(data, response, params) {
@@ -14,9 +19,9 @@ var params = {
 };
 
 /** Public API */
-coinCheck.ticker.all(params);
-coinCheck.trade.all(params);
-coinCheck.orderBook.all(params);
+// coinCheck.ticker.all(params);
+// coinCheck.trade.all(params);
+// coinCheck.orderBook.all(params);
 
 /** Private API */
 // params['data'] = {
@@ -37,7 +42,7 @@ coinCheck.orderBook.all(params);
 
 // coinCheck.account.balance(params);
 // coinCheck.account.leverage_balance(params);
-// coinCheck.account.info(params);
+coinCheck.account.info(params);
 
 // params['data'] = {
 //     address: '1Gp9MCp7FWqNgaUWdiUiRPjGqNVdqug2hY',
